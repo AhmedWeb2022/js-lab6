@@ -71,11 +71,18 @@ submit.onclick = function add() {
   dataInput.value = "";
 };
 
-document.addEventListener("click", (e) => {
+// document.addEventListener("click", (e) => {
+//   if (e.target.className == "done") {
+//     console.log("done");
+//     e.target.parentNode.style.backgroundColor = "#73f073";
+//   } else if (e.target.classList == "delete") {
+//     e.target.parentNode.remove();
+//   }
+// });
+document.onclick = function (e) {
   if (e.target.className == "done") {
-    console.log("done");
     e.target.parentNode.style.backgroundColor = "#73f073";
   } else if (e.target.classList == "delete") {
     e.target.parentNode.remove();
   }
-});
+};
